@@ -1,0 +1,14 @@
+/* Container Style */
+.container-app {
+  min-height: 100vh; /* Set the container height to at least the height of the viewport */
+  display: flex;
+  flex-direction: column; /* Set the container to be a column */
+}
+
+.header-comp {
+  top: 0;
+}
+.footer-comp {
+  bottom: 0;
+}
+

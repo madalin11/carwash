@@ -1,0 +1,31 @@
+<div [ngClass]="{'loading': (isLoading$ | async) || loading}"
+     class="content d-flex flex-column align-content-center align-items-center shadow-lg my-5 pb-2 mb-5 mt-5"
+>
+  <form class="d-flex flex-column px-3"
+        style="width: 300px"
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()"
+  >
+    <div class="d-flex py-2 pt-3 pb-4 flex-column  align-items-center">
+      <h1 class="display-1" style="color: #00d8ff; font-size: 40px;font-family: 'Apple Color Emoji',emoji">
+        Login</h1>
+    </div>
+    <p class="form-label text-secondary">Email</p>
+    <input
+      formControlName="email"
+      type="text"
+      class="form-control mb-2"
+      placeholder="Email"/>
+    <p class="form-label text-secondary">Password</p>
+    <input
+      formControlName="password"
+      type="password"
+      class="form-control mb-2"
+      placeholder="Password"/>
+    <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary mt-4 mb-3">Login</button>
+    <a routerLink="../register" class="align-self-center" style="color: #00d8ff">Create an account</a>
+  </form>
+</div>
+
+
+

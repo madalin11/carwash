@@ -1,0 +1,44 @@
+<div [ngClass]="{'loading': (isLoading$ | async) || loading}"
+     class="content d-flex flex-column align-content-center align-items-center shadow-lg my-5 pb-2">
+  <form class="d-flex flex-column px-3"
+        style="width: 300px"
+        [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()"
+  >
+    <div class="d-flex py-2 pt-3 pb-4 flex-column  align-items-center">
+      <h2 class="display-3" style="color: #00d8ff; font-size: 40px; font-family: 'Apple Color Emoji',ui-sans-serif">Register</h2>
+    </div>
+    <p class="form-label text-secondary">First Name</p>
+    <input
+      formControlName="firstName"
+      type="text"
+      class="form-control mb-2"
+      placeholder="First Name"/>
+    <p class="form-label text-secondary">Last Name</p>
+    <input
+      formControlName="lastName"
+      type="text"
+      class="form-control mb-2"
+      placeholder="Last Name"/>
+    <p class="form-label text-secondary">Phone number</p>
+    <input
+      formControlName="phoneNumber"
+      type="text"
+      class="form-control mb-2"
+      placeholder="e.g. +40 763434343"/>
+    <p class="form-label text-secondary">Email</p>
+    <input
+      formControlName="email"
+      type="text"
+      class="form-control mb-2"
+      placeholder="Email"/>
+    <p class="form-label text-secondary">Password</p>
+    <input
+      formControlName="password"
+      type="password"
+      class="form-control mb-2"
+      placeholder="Password"/>
+    <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary mt-4 mb-3">Register</button>
+    <a class="align-self-center" routerLink="../login" style="color: #00d8ff">Already have an account? Log in</a>
+  </form>
+</div>
