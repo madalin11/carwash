@@ -18,6 +18,7 @@ import { AuthenticationPageComponent } from "./authentication/authentication-pag
 import { LoginComponent } from "./authentication/components/login/login.component";
 import { RegisterComponent } from "./authentication/components/register/register.component";
 import { MainPageComponent } from "./main/main-page/main-page.component";
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MainPageComponent } from "./main/main-page/main-page.component";
     AuthenticationPageComponent,
     LoginComponent,
     RegisterComponent,
-    MainPageComponent
+    MainPageComponent,
+    GoogleMapsComponent
   ],
   imports: [
     BrowserModule,
